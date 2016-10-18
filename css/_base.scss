@@ -1,0 +1,54 @@
+body{
+  max-height: 100%;
+  font-family: $base-font;
+  color: #000000;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(space-around);
+  @include justify-content(flex-start);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $main-color;
+}
+
+h1 {
+  font-size: 7.6875em;
+}
+
+header {
+  height: 100px;
+  @include flex(0 0 auto);
+
+  .client-logo {
+    float: right;
+    width: 50%;
+    max-height: 80px;
+    margin-top: 10px;
+  }
+}
+
+section.main {
+  @include flex(1 1 auto);
+  max-height: 100%;
+  overflow: scroll;
+
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+}
+
+footer {
+  @include flex(0 0 auto);
+  height: 100px;
+  background: $main-color;
+}
+
+.page {
+  text-align: center;
+
+  p {
+    font-size: 4em;
+  }
+}

@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Cheers!</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <%- partial("_header") %>
+
+    <section class='main'>
+      <%- yield %>
+    </section>
+
+    <%- partial("_footer") %>
+
+  </body>
+</html>
