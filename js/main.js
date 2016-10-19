@@ -9,51 +9,44 @@ $(document).ready(function(){
     page.hide();
   }
 
-  var that = techMap;
+  var that = this;
 
    techMap.el = $(document);
 
-   var curPage = techMap.currentPage;
-   var pagesObj = techMap.pages;
 
   techMap.canSwipe = true;
   
   //cheating for mobile, swipe right goes back
   techMap.el.hammer().on('swiperight', function () {
-    if (that.canSwipe) {
-      previous(curPage, pagesObj);
+    if (techMap.canSwipe) {
+      previous();
     }
   });
 
   //cheating for mobile, swipe left goes forward
   techMap.el.hammer().on('swipeleft', function () {
-    if (that.canSwipe) {
-      next(curPage, pagesObj);
+    if (techMap.canSwipe) {
+      next();
     }
   });
-
-   if ($.hotkeys){
-    //keyboard down events
-    techMap.el.on('keydown',null,'left',function(e){
-      previous(curPage, pagesObj);
-    });
-
-    techMap.el.on('keydown',null,'right',function(e){
-      next(curPage, pagesObj);
-    });
-   }
-   start(curPage, pagesObj);
+   start();
 });
-  function start(curPage, pagesObj){
-    $(pagesObj[curPage]).show();
+  function start(){
+    $(techMap.pages[techMap.currentPage]).show();
   }
-  function next(curPage, pagesObj){
-    $(pagesObj[curPage]).hide();
-    var nextPage = curPage + 1;
-    $(pagesObj[nextPage]).show();
+  function next(){
+    $(techMap.pages[techMap.currentPage]).hide();
+    techMap.currentPage++;
+    if(techMap.currentPage > techMap.pages.length -1){
+      techMap.currentPage = techMap.currentPage - 1;
+    }
+    $(techMap.pages[techMap.currentPage]).show();
   }
-  function previous(curPage, pagesObj){
-    $(pagesObj[curPage]).hide();
-    curPage -= 1;
-    $(pagesObj[curPage]).show();
+  function previous(){
+    $(techMap.pages[techMap.currentPage]).hide();
+    techMap.currentPage--;
+    if(techMap.currentPage < 0){
+      techMap.currentPage = techMap.currentPage + 1;
+    }
+    $(techMap.pages[techMap.currentPage]).show();
   }
