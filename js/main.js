@@ -11,14 +11,12 @@ $(document).ready(function(){
 
   var that = this;
 
-   techMap.el = $(document);
+  techMap.el = $(document);
   
-  //cheating for mobile, swipe right goes back
   techMap.el.hammer().on('swiperight', function () {
       previous();
   });
 
-  //cheating for mobile, swipe left goes forward
   techMap.el.hammer().on('swipeleft', function () {
       next();
   });
