@@ -12,22 +12,15 @@ $(document).ready(function(){
   var that = this;
 
    techMap.el = $(document);
-
-
-  techMap.canSwipe = true;
   
   //cheating for mobile, swipe right goes back
   techMap.el.hammer().on('swiperight', function () {
-    if (techMap.canSwipe) {
       previous();
-    }
   });
 
   //cheating for mobile, swipe left goes forward
   techMap.el.hammer().on('swipeleft', function () {
-    if (techMap.canSwipe) {
       next();
-    }
   });
    start();
 });
