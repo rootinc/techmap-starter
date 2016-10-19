@@ -1,7 +1,7 @@
 var techMap = {};
 $(document).ready(function(){
   techMap.pages = $(".page");
-  techMap.pagesActualLength = techMap.pages.length - 1;
+  techMap.pagesLength = techMap.pages.length;
   techMap.beginningPage = 0;
   var that = this;
 
@@ -28,7 +28,7 @@ function start(){
 }
 
 function next(){
-  if(techMap.currentPage < techMap.pagesActualLength){
+  if(techMap.currentPage < techMap.pagesLength - 1){
     $(techMap.pages[techMap.currentPage]).hide();
     techMap.currentPage++;
     $(techMap.pages[techMap.currentPage]).show();
