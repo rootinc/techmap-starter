@@ -26,18 +26,22 @@ $(document).ready(function(){
     $(techMap.pages[techMap.currentPage]).show();
   }
   function next(){
+    var pagesActualLength = techMap.pages.length - 1;
+    var previousPage = techMap.currentPage - 1;
     $(techMap.pages[techMap.currentPage]).hide();
     techMap.currentPage++;
-    if(techMap.currentPage > techMap.pages.length -1){
-      techMap.currentPage = techMap.currentPage - 1;
+    if(techMap.currentPage > pagesActualLength){
+      techMap.currentPage = previousPage;
     }
     $(techMap.pages[techMap.currentPage]).show();
   }
   function previous(){
+    var beginningPage = 0;
+    var nextPage = techMap.currentPage + 1;
     $(techMap.pages[techMap.currentPage]).hide();
     techMap.currentPage--;
-    if(techMap.currentPage < 0){
-      techMap.currentPage = techMap.currentPage + 1;
+    if(techMap.currentPage < beginningPage){
+      techMap.currentPage = nextPage;
     }
     $(techMap.pages[techMap.currentPage]).show();
   }
