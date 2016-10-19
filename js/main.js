@@ -20,17 +20,6 @@ $(document).ready(function(){
     next();
   });
 
-  if ($.hotkeys){
-    //keyboard down events
-    techMap.el.on('keydown',null,'left',function(e){
-      previous();
-    });
-
-    techMap.el.on('keydown',null,'right',function(e){
-      next();
-    });
-  }
-
   start();
 });
 
