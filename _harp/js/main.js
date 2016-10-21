@@ -18,12 +18,6 @@ var TechMap = Module.extend({
       name:"first",
       group:"intro",
       activitiesList:[
-        {
-          name:"StartActivity",
-          properties:{
-            button:"#startButton"
-          }
-        }
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
@@ -45,25 +39,7 @@ var TechMap = Module.extend({
       name:"third",
       group:"main",
       activitiesList:[
-        {
-          name:"AccordionActivity",
-          properties:{
-            clicks:[
-              "#accordionPage .accordion h3:nth-child(1)",
-              "#accordionPage .accordion h3:nth-child(3)",
-              "#accordionPage .accordion h3:nth-child(5)",
-              "#accordionPage .accordion h3:nth-child(7)",
-              "#accordionPage .accordion h3:nth-child(9)"
-            ],
-            reveals:[
-              "#accordionPage .accordion div:nth-child(2)",
-              "#accordionPage .accordion div:nth-child(4)",
-              "#accordionPage .accordion div:nth-child(6)",
-              "#accordionPage .accordion div:nth-child(8)",
-              "#accordionPage .accordion div:nth-child(10)"
-            ]
-          }
-        }
+
       ],
       facilitatorTexts:[41],
       titleTexts:[0]
@@ -83,6 +59,17 @@ var TechMap = Module.extend({
       module:this,
       el:'#fifth',
       name:"fifth",
+      group:"main",
+      activitiesList:[
+
+      ],
+      facilitatorTexts:[43],
+      titleTexts:[0]
+    }),
+    new Page({
+      module:this,
+      el:'#sixth',
+      name:"sixth",
       group:"main",
       activitiesList:[
 
