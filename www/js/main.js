@@ -142,7 +142,7 @@ $(window).load(function(){
         defaultLanguage:"en",
         language:{
           en:{
-            "default":"https://ned.rootinc.tools/api/project/57bb84d05cbb3e1600b08110/export/json/en/"
+            "default":"js/lang0.json"
           }
         },
         helpButton:"#help",
