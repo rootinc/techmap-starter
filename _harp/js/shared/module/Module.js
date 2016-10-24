@@ -162,10 +162,10 @@ var Module = Class.extend({
     @protected
     */
     this.$nextButton = $(properties.nextButton);
-    /*if (this.$nextButton.length === 0)
+    if (this.$nextButton.length === 0)
     {
       throw new TypeError("No such selector "+this.$nextButton.selector);
-    }*/
+    }
 
     /**
     the jquery string for the previous button
@@ -174,10 +174,10 @@ var Module = Class.extend({
     @protected
     */
     this.$previousButton = $(properties.previousButton);
-    /*if (this.$previousButton.length === 0)
+    if (this.$previousButton.length === 0)
     {
       throw new TypeError("No such selector "+this.$previousButton.selector);
-    }*/
+    }
 
     /**
     the jquery string for the help button
@@ -186,10 +186,10 @@ var Module = Class.extend({
     @protected
     */
     this.$helpButton = $(properties.helpButton);
-    /*if (this.$helpButton.length === 0)
+    if (this.$helpButton.length === 0)
     {
       throw new TypeError("No such selector "+this.$helpButton.selector);
-    }*/
+    }
 
     /**
     the jquery object for the help container
@@ -198,10 +198,10 @@ var Module = Class.extend({
     @protected
     */
     this.$helpContainer = $(properties.helpContainer);
-    /*if (this.$helpContainer.length === 0)
+    if (this.$helpContainer.length === 0)
     {
       throw new TypeError("No such selector "+this.$helpContainer.selector);
-    }*?
+    }
 
     /**
     path to the audio on image
@@ -266,10 +266,10 @@ var Module = Class.extend({
     @protected
     */
     this.$currentPageText = properties.currentPageText ? $(properties.currentPageText) : $(properties.pageNumText);
-    /*if (this.$currentPageText.length === 0)
+    if (this.$currentPageText.length === 0)
     {
       throw new TypeError("No such selector "+this.$currentPageText.selector);
-    }*/
+    }
 
     /**
     id of the max page container
@@ -278,10 +278,10 @@ var Module = Class.extend({
     @protected
     */
     this.$totalPageText = properties.totalPageText ? $(properties.totalPageText) : $(properties.pageMaxText);
-    /*if (this.$totalPageText.length === 0)
+    if (this.$totalPageText.length === 0)
     {
       throw new TypeError("No such selector "+this.$totalPageText.selector);
-    }*/
+    }
 
     /**
     id of the facilitator container
@@ -290,10 +290,10 @@ var Module = Class.extend({
     @protected
     */
     this.$facilitatorText = $(properties.facilitatorText);
-    /*if (this.$facilitatorText.length === 0)
+    if (this.$facilitatorText.length === 0)
     {
       throw new TypeError("No such selector "+this.$facilitatorText.selector);
-    }*/
+    }
 
     /**
     id of the title container
@@ -302,10 +302,10 @@ var Module = Class.extend({
     @protected
     */
     this.$titleText = $(properties.titleText);
-    /*if (this.$titleText.length === 0)
+    if (this.$titleText.length === 0)
     {
       throw new TypeError("No such selector "+this.$titleText.selector);
-    }*/
+    }
 
     /**
     whether the module is currently showing the ted ids.
@@ -445,10 +445,6 @@ var Module = Class.extend({
     this.$nextButton.on('click',function(e){
       that._nextPageButton(e);
     });
-
-    //if we can cheat in the module (remember, this is cheating, the user won't do this)
-    if (this.debug.active)
-    {
       //quick previous function wrapper
       var previous = function()
       {
@@ -501,7 +497,7 @@ var Module = Class.extend({
         console.warn("You may have forgot to include Hammer plugin");
       }
 
-      if ($.hotkeys)
+      if ($.hotkeys && this.debug.active)
       {
         //keyboard down events
         this.$el.on('keydown',null,'left',function(e){
@@ -535,7 +531,6 @@ var Module = Class.extend({
       {
         console.warn("You may have forgot to include jquery.hotkeys plugin");
       }
-    }
   },
 
   /**

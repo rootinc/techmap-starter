@@ -12,7 +12,7 @@ var TechMap = Module.extend({
     this.loader.hide();
 
     this.pages = [
-    new Page({//startPage
+    new Page({
       module:this,
       el:'#first',
       name:"first",
@@ -22,7 +22,7 @@ var TechMap = Module.extend({
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({//clickRevealPage
+    new Page({
       module:this,
       el:'#second',
       name:"second",
@@ -30,10 +30,10 @@ var TechMap = Module.extend({
       activitiesList:[
 
       ],
-      facilitatorTexts:[40],
+      facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({//accordionPage
+    new Page({
       module:this,
       el:'#third',
       name:"third",
@@ -41,7 +41,7 @@ var TechMap = Module.extend({
       activitiesList:[
 
       ],
-      facilitatorTexts:[41],
+      facilitatorTexts:[0],
       titleTexts:[0]
     }),
     new Page({//videoPage
@@ -63,7 +63,7 @@ var TechMap = Module.extend({
       activitiesList:[
 
       ],
-      facilitatorTexts:[43],
+      facilitatorTexts:[0],
       titleTexts:[0]
     }),
     new Page({
@@ -74,7 +74,7 @@ var TechMap = Module.extend({
       activitiesList:[
 
       ],
-      facilitatorTexts:[43],
+      facilitatorTexts:[0],
       titleTexts:[0]
     })
     ];
@@ -146,12 +146,12 @@ $(window).load(function(){
         helpButton:"#help",
         helpContainer:"#helpContainer",
         progressContainer:"#progressContainer",
-        nextButton:"",
-        previousButton:"",
+        nextButton:"#nextButton",
+        previousButton:"#previousButton",
         facilitatorText:"#bottomText",
         titleText:"#titleSection",
-        currentPageText:"#progessCounter .current",
-        totalPageText:"#progessCounter .total",
+        currentPageText:"#currentPage",
+        totalPageText:"#totalPages",
         audioPath:'../audio/',
         audioPrefix:'',
         disabledClass:'disabled',
