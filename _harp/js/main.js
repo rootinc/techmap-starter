@@ -4,6 +4,8 @@ var TechMap = Module.extend({
     this.loader = $("#main .loader");
 
     this._super(properties);
+    this.$currentPageText.addClass('hide');
+    this.$totalPageText.addClass('hide');
   },
   moduleReady:function()
   {
