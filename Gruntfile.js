@@ -2,14 +2,29 @@ module.exports = function(grunt) {
   grunt.initConfig({
     harp:{
       dist:{
-        source:'_harp',
+        source:'_copy_',
         dest:'www'
       }
+    },
+    copy:{
+      main:{
+        files:[
+          {
+            expand:true,
+            cwd:'_harp/',
+            src:'**',
+            dest:'_copy_/'
+          }
+        ]
+      }
+    },
+    clean:{
+      main:'_copy_'
     },
     searchAndDownload:{
       saveLanguageFiles:{
         options:{
-          directory:'_harp/js/', //main js directory
+          directory:'_copy_/js/', //main js directory
           files:"*.js", //get main js file
           pattern:/https:\/\/ned\.rootinc\.tools\/api\/project\/[^\"]+(?=\")/ig, //ned regex
           newFile:function(properties,link,path,index){
@@ -26,11 +41,15 @@ module.exports = function(grunt) {
     }
   });
   
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-harp');
   grunt.loadTasks('ned-grunt/');
   
   grunt.registerTask('default',[
+    'copy:main',
     'searchAndDownload:saveLanguageFiles',
-    'harp'
+    'harp',
+    'clean:main'
   ]);
 };
