@@ -1,23 +1,7 @@
 {
-  "name": "phonegap-template-hello-world",
-  "version": "4.0.2",
-  "description": "> A Hello World template built with PhoneGap",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/phonegap/phonegap-app-hello-world.git"
-  },
-  "author": "PhoneGap Team",
-  "license": "Apache-2.0.0",
-  "keywords": [
-    "ecosystem:phonegap",
-    "ecosystem:cordova",
-    "cordova:template",
-    "phonegap:template"
-  ],
-  "bugs": {
-    "url": "https://github.com/phonegap/phonegap-app-hello-world/issues"
-  },
-  "homepage": "https://github.com/phonegap/phonegap-app-hello-world",
+  "name": "techmap-starter",
+  "description": "> The TechMap starter kit.",
+  "author": "Root Inc Dev Team",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^1.0.0",
