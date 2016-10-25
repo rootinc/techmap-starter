@@ -19,6 +19,7 @@ module.exports = function(grunt) {
       }
     },
     clean:{
+      www:'www',
       main:'_copy_'
     },
     searchAndDownload:{
@@ -47,6 +48,7 @@ module.exports = function(grunt) {
   grunt.loadTasks('ned-grunt/');
   
   grunt.registerTask('default',[
+    'clean:www',
     'copy:main',
     'searchAndDownload:saveLanguageFiles',
     'harp',
