@@ -21,6 +21,10 @@ h1 {
   line-height: 90px;
 }
 
+video, img {
+  max-width: 100%;
+}
+
 section.main {
   height: 100%;
   overflow: scroll;
@@ -42,6 +46,16 @@ footer {
   @include justify-content(center);
   padding: 2em;
   text-align: center;
+
+  .column-wrap {
+    @include display(flex);
+    @include flex-direction(row);
+  }
+
+  .column {
+    width: 50%;
+    display: inline-block;
+  }
 
   p {
     margin-top: 0;

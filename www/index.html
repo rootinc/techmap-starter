@@ -42,20 +42,24 @@
   </head>
   <body>
     <noscript> No Javascript</noscript>
-    <header>
-  <img src="./img/client-logo.svg" alt="Pepsico" class="client-logo">
-</header>
-
+    <!--  -->
 
     <section class='main'>
       <div id="first" class="page">
-  <p data-lang="1"></p>
-  <h1>The Revolution on Beverage Street</h1>
+  <div class="column-wrap">
+    <div class="column">
+      <img src="./img/client-logo.svg" width="290px">
+      <h1>The Revolution on Beverage Street</h1>
+    </div>
+    <div class="column">
+      <img src="./img/intro-img.png">
+    </div>
+  </div>
   <p>Swipe left to start film introduction.</p>
 </div>
 
 <div id="second" class="page">
-  <video src=""></video>
+  <video src="./vid/Root_Pepsi_Internal_v2.mp4" poster="./vid/vid-poster.png" controls></video>
 </div>
 
 <div id="third" class="page">
@@ -71,13 +75,17 @@
   <p><strong>Swipe left to begin.</strong></p>
 </div>
 
-<div id="sixth" class="page">
+<div id="chart" class="page">
+  <img src="./img/chart.png">
+</div>
+
+<div id="end" class="page">
   <p>This concludes the session. Thank you.</p>
 </div>
     </section>
 
     <footer>
-  test
+
 </footer>
 
     <div id="pageSelector"></div>

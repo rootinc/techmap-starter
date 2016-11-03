@@ -70,8 +70,19 @@ var TechMap = Module.extend({
     }),
     new Page({
       module:this,
-      el:'#sixth',
-      name:"sixth",
+      el:'#chart',
+      name:"chart",
+      group:"main",
+      activitiesList:[
+
+      ],
+      facilitatorTexts:[0],
+      titleTexts:[0]
+    }),
+    new Page({
+      module:this,
+      el:'#end',
+      name:"end",
       group:"main",
       activitiesList:[
 
