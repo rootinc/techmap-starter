@@ -1,4 +1,4 @@
-var TechMap = Module.extend({
+var TechMap = MapDialogueModule.extend({
   init:function(properties) //constructor
   {
     this.loader = $("#main .loader");
@@ -14,76 +14,83 @@ var TechMap = Module.extend({
     this.loader.hide();
 
     this.pages = [
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#first',
       name:"first",
-      group:"intro",
+      group:"main",
+      cornerIcon:"curl",
       activitiesList:[
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#second',
       name:"second",
       group:"main",
+      cornerIcon:"none",
       activitiesList:[
 
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#third',
       name:"third",
       group:"main",
+      cornerIcon:"dialogue",
       activitiesList:[
 
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({//videoPage
+    new TechMapPage({//videoPage
       module:this,
       el:'#fourth',
       name:"fourth",
       group:"main",
+      cornerIcon:"cards",
       activitiesList:[
 
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#fifth',
       name:"fifth",
       group:"main",
+      cornerIcon:"curl",
       activitiesList:[
 
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#chart',
       name:"chart",
       group:"main",
+      cornerIcon:"none",
       activitiesList:[
 
       ],
       facilitatorTexts:[0],
       titleTexts:[0]
     }),
-    new Page({
+    new TechMapPage({
       module:this,
       el:'#end',
       name:"end",
       group:"main",
+      cornerIcon:"none",
       activitiesList:[
 
       ],
@@ -91,13 +98,45 @@ var TechMap = Module.extend({
       titleTexts:[0]
     })
     ];
-
     this._super();
-  },
+  
+    $("footer #groupTitle").on("click", function(evt){
+      that.toggleChapterMenu();
+    });
+    $("section.menu div#chapterBackground").on("click", function(evt){
+      that.toggleChapterMenu();
+    })
+    $("section.menu li").on("click", function(evt){
+      var group = $(this).data("group");
+      that.chapterMenuChoice(group);
+    })
+    console.log("End module ready.");
+  }, // end module Ready.
   loadPage:function(page)
   {
+    
     this._super(page);
-
+    // set interface corner icon.
+    console.log("Load page " , page);
+    $("#cornerIcon img").attr("src", "img/icons/" + page.cornerIcon+".png");
+    
+    // fade in new pages.
+    if (page.name != "start"){
+      var pageObj = $("#"+ page.name);
+      pageObj.fadeTo(0, 0, function(obj){
+        $(this).fadeTo(200, 1);
+      });
+	   }
+    /*
+    if (page.group == "start" || page.group == "main"){
+      $("footer").hide();
+    } else {
+      $("footer").show();
+    }
+    */
+    $(".footerTitle").hide();
+    $(".footerTitle[data-group='" + page.group +"']").show();
+    //
     if (this.currentPage <= 1)
     {
       this.$previousButton.css('visibility','hidden');
@@ -111,10 +150,6 @@ var TechMap = Module.extend({
     {
       this.$nextButton.css('visibility','hidden');
 
-      this.setLocation();
-      this.setTime();
-      this.setStatus("completed");
-      this.setScore(100);
     }
     else
     {
@@ -132,7 +167,8 @@ var TechMap = Module.extend({
       this.lockAndStay(); //stay on page 1
       break;
     }
-  }
+  },
+  
 });
 
 $(window).load(function(){
@@ -179,3 +215,7 @@ $(window).load(function(){
     }
   });
 });
+
+
+
+

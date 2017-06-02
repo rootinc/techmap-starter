@@ -38,6 +38,8 @@
     <script type="text/javascript" src="./js/shared/parser/json-parser/NedJSONParser.js"></script>
 
 		<script type="text/javascript" src="./js/shared/marge/MargeLoader.js"></script>
+		<script type="text/javascript" src="./js/module/MapDialogueModule.js"></script>
+		<script type="text/javascript" src="./js/page/TechMapPage.js"></script>
     <script src="./js/main.js"></script>
   </head>
   <body>
@@ -46,6 +48,9 @@
 
     <section class='main'>
       <%- yield %>
+      <div id="cornerIcon">
+        <img src="img/int-curl.png">
+      </div>
     </section>
 
     <%- partial("_footer") %>

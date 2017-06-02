@@ -1,0 +1,50 @@
+footer {
+  @include flex(0 0 auto);
+  
+  display: flex;
+  flex-directoin: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+  height: 60px;
+  background: $main-color;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  p {
+	  color: #FFFFFF;
+    margin: 0 0;
+  }
+  
+  .menuBtn{
+	  width: 30px;
+	  height: 30px;
+	  background-color: #FFFFFF;
+	  float: right;
+  }
+  
+  .footerBlock {
+    margin: 0 0;
+  }
+  
+  .footerHead{
+    font-size: 12px;
+  }
+  
+  .footerContent{
+    font-size: 20px;
+    margin-top: -4px;
+  }
+  
+  #groupPage {
+    text-align:center;
+  }
+  #groupTime {
+    text-align: right;
+  }
+  #chapterNames {
+    display: none;
+  }
+}
