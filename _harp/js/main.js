@@ -80,6 +80,19 @@ var TechMap = MapDialogueModule.extend({
       group:"main",
       cornerIcon:"none",
       activitiesList:[
+          {
+            name:"HorizontalSimpleSliderActivity",
+            properties:{
+              slider:"#chart .area1",
+              handle:".handle",
+              level:".level",
+              percentage:".percentage",
+              startLevel:.2,
+              answer:.55,
+              range:.05,
+              sender:'pastyears-1'
+            }
+          },
 
       ],
       facilitatorTexts:[0],

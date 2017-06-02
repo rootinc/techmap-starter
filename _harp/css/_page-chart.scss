@@ -1,3 +1,50 @@
 #chart{
 
+  .activity{
+    position: absolute;
+    display: block;
+    width: 837px;
+    height: 432px;
+    
+    .dragarea{
+      position: absolute;
+      display: block;
+      width:465px;
+      height:66px;
+      background-color:rgba(164,69,71,0.05);
+      
+      .handle{
+        right: 0px;
+        position: absolute;
+        top: 5px;
+        width: 38px;
+        height: 54px;
+      }
+      .level{
+        background-color: $main-color;
+        right: 0px;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+      }
+    }
+    #area1{
+      top: 75px;
+      left: 243px;
+    }
+    #area2{
+      top: 167px;
+      left: 243px;
+    }
+    #area3{
+      top: 257px;
+      left: 243px;
+    }
+    #background{
+      position: absolute;
+      display: block;
+      top:0;
+      left:0;     
+    }
+  }
 }
