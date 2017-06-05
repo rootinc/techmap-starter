@@ -126,6 +126,9 @@ var TechMap = MapDialogueModule.extend({
     // set interface corner icon.
     console.log("Load page " , page);
     $("#cornerIcon img").attr("src", "img/icons/" + page.cornerIcon+".png");
+    $("#cornerIcon img").hide();
+    $("#cornerIcon img").delay(500).fadeIn(1000);
+    
     
     // fade in new pages.
     if (page.name != "start"){
