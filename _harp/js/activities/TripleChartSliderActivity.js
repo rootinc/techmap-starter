@@ -57,11 +57,13 @@ var TripleChartSliderActivity = Activity.extend({
         start:function(e, ui){
           var active_handle = $(e.target);
           var instruct = active_handle.parent().find(".instruct");
+          that.page.module.canSwipe = false;
           instruct.fadeOut(100);
         },
         stop:function(){
           that.submitButton.show();
-        }
+          that.page.module.canSwipe = true;
+         } 
       })
     })
     this.submitButton.on("click", function(){
