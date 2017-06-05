@@ -6,12 +6,40 @@
     width: 837px;
     height: 516px;
     
+    .label {
+      font-size: 2.6em;
+      padding-top:6px;
+      color: black;
+      position: absolute;
+      left: 70px;
+    }
+    .value {
+      position: absolute;
+      left: 728px;
+      text-align: left;
+      font-size: 1.6em;
+      right: 10px;
+      color: #0099d9;
+      padding-top: 16px;
+    }
+    .row1{
+      top: 75px;
+    }
+    .row2{
+      top: 167px;
+    }
+    .row3{
+      top: 257px;
+    }
+    .row4{
+      top: 347px;
+    }
     .dragarea{
       position: absolute;
       display: block;
       width:465px;
       height:66px;
-      background-color:rgba(164,69,71,0.05);
+      left: 243px;
       
       .handle{
         right: 0px;
@@ -30,15 +58,15 @@
     }
     #area1{
       top: 75px;
-      left: 243px;
     }
     #area2{
-      top: 167px;
-      left: 243px;
+      top: 167px
     }
     #area3{
       top: 257px;
-      left: 243px;
+    }
+    #area4{
+      top: 347px;
     }
     #background{
       position: absolute;

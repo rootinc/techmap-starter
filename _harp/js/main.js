@@ -85,7 +85,8 @@ var TechMap = MapDialogueModule.extend({
           properties:{
             handleSelector:".ui-draggable",
             submitSelector:"#submitBtn",
-            answerList:[10, 210, 310],
+            labelMax: 15,
+            answerList:[13.4, 12.3, 10.3, 6.1],
           },
         }
       ],
