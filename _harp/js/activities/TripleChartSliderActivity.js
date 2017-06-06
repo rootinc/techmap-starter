@@ -35,8 +35,8 @@ var TripleChartSliderActivity = Activity.extend({
           // find the handle, and the "bar" associated with it.
           var $handle = $(e.target);
           var $level = $handle.parent().find(".level");
-          var $label = that.page.$el.find(label_selector);
           var label_selector = ".value.row" + $handle.data("index")
+          var $label = that.page.$el.find(label_selector);
           // Find left, and original left (which is max)
           var left = ui.position.left;
           var oleft = $handle.parent().width() - $handle.width();
