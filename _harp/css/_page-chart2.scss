@@ -1,13 +1,23 @@
-#chart{
+#chart2{
 
+  .actWrap {
+    position: absolute;
+    width: 837px;
+    height: 520px;
+    
+    p{
+      text-align:left;
+      padding: 0px;
+    }
+  }
   .activity{
     position: absolute;
     display: block;
-    width: 837px;
-    height: 516px;
+    width: 700px;
+    height: 450px;
     
     .label {
-      font-size: 2.6em;
+      font-size: 2.0em;
       padding-top:6px;
       color: black;
       position: absolute;
@@ -15,48 +25,65 @@
     }
     .value {
       position: absolute;
-      left: 728px;
+      left: 612px;
       text-align: left;
       font-size: 1.6em;
       right: 10px;
       color: #0099d9;
-      padding-top: 16px;
+      padding-top: 6px;
+    }
+    .population {
+      left: 708px;
     }
     .row1{
-      top: 75px;
+      top: 63px;
     }
     .row2{
-      top: 167px;
+      top: 140px;
     }
     .row3{
-      top: 257px;
+      top: 215px;
     }
     .row4{
-      top: 347px;
+      top: 294px;
     }
     .dragarea{
       position: absolute;
       display: block;
-      width:465px;
-      height:66px;
-      left: 243px;
+      width:388px;
+      height:54px;
+      left: 203px;
       
       .handle{
+        display: none;
         right: 0px;
         position: absolute;
         top: 5px;
-        width: 30px;
+        width: 38px;
         height: 54px;
       }
       .level{
         background-color: $main-color;
-        background-image: url("../img/can.png");
+        background-image: url("../img/can26.png");
         background-repeat: repeat-x;
         right: 0px;
         position: absolute;
         width: 0px;
         height: 100%;
       }
+      
+    }
+    #area1{
+      .level{ width: 89.3% }
+    }
+    #area2{
+      .level{ width: 82% }
+    }
+    #area3{
+      .level{ width: 68% }
+    }
+    #area4{
+      .level{ width: 40.66% }
     }
     #background{
       position: absolute;
@@ -82,6 +109,7 @@
       }
     }
     .instruct{
+      display: none;
       position: absolute;
       font-size: 1.6em;
       right: 10px;

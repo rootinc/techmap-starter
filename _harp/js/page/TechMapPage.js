@@ -4,6 +4,7 @@ var TechMapPage = Page.extend({
   {     
     this._super(properties);
     this.cornerIcon = properties.cornerIcon;
+    this.minutes = properties.minutes;
   },
   destroy: function(){
     console.log("Destroy " , this);

@@ -31,6 +31,38 @@ section.main {
   @include flex(1 1 auto);
 }
 
+section.menu {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  ul.chapterMenu{
+    position: absolute;
+    bottom: 35px;
+    left: 6px;
+    li{
+      list-style:none;
+      padding: 10px 10px;
+      margin: 2px 0px;
+      background-color: $main-color;
+      color: white;
+      display: block;
+      font-size: 20px;
+    }
+  }
+  div#chapterBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
 footer {
   @include flex(0 0 auto);
   height: 55px;
@@ -49,6 +81,11 @@ footer {
     margin-top: 0;
     font-size: 2em;
     line-height: 1.15625em;
+  }
+  .sectionTitle {
+    font-weight: bold;
+    color: $main-color;
+    margin-bottom: 8px;
   }
 }
 

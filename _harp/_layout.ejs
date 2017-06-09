@@ -9,11 +9,12 @@
 		<script type="text/javascript" src="./js/shared/lib/jquery/ui/jquery.ui.widget.js"></script>
 		<script type="text/javascript" src="./js/shared/lib/jquery/ui/jquery.ui.mouse.js"></script>
 		<script type="text/javascript" src="./js/shared/lib/jquery/ui/jquery.ui.draggable.js"></script>
-
+		<script type="text/javascript" src="./js/shared/lib/jquery/ui/jquery.ui.draggable.js"></script>
+   
     <script type="text/javascript" src="./js/shared/lib/jquery/jQuery.XDomainRequest.js"></script>
     <script type="text/javascript" src="./js/shared/lib/jquery/jquery.jplayer.js"></script>
     <script type="text/javascript" src="./js/shared/lib/jquery/jquery.hammer.js"></script>
-    <script type="text/javascript" src="./js/shared/lib/jquery/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="./js/shared/lib/jquery/jquery.ui.touch-punch.js"></script>
 
     <script type="text/javascript" src="./js/shared/lib/utils.js"></script>
     <script type="text/javascript" src="./js/shared/lib/json2.js"></script>
@@ -48,6 +49,10 @@
   <body>
     <noscript> No Javascript</noscript>
     <!-- <%- partial("_header") %> -->
+
+    <section class="menu hide">
+      <%- partial ("_menu") %>
+    </section>
 
     <section class='main'>
       <%- yield %>
