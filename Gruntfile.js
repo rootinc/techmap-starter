@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         options:{
           directory:'_copy_/js/', //main js directory
           files:"*.js", //get main js file
-          pattern:/https:\/\/ned\.rootinc\.tools\/api\/project\/[^\"]+(?=\")/ig, //ned regex
+          pattern:/https:\/\/ned-production\.herokuapp\.com\/api\/project\/[^\"]+(?=\")/ig, //ned regex
           newFile:function(properties,link,path,index){
             var fileName = 'lang'+index+'.json';
 
@@ -41,12 +41,12 @@ module.exports = function(grunt) {
       }
     }
   });
-  
+
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-harp');
   grunt.loadTasks('ned-grunt/');
-  
+
   grunt.registerTask('default',[
     'clean:www',
     'copy:main',
