@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.rootinc.techmapdemo" version="0.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>TechMap Demo</name>
+<widget id="com.rootinc.pepsibevstreet" version="0.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Pepsi TechMap Demo</name>
     <description>
-        TechMap Demo App.
+        Pepsi TechMap Demo
     </description>
     <author email="developers@rootinc.com" href="http://rootinc.com">
         Root Inc Development Team
