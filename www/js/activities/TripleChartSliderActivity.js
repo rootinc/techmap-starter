@@ -2,7 +2,6 @@
 Used for quizzes
 @class QuizActivity
 @extends Activity
-@author Dan Jewett
 @constructor
 */
 var TripleChartSliderActivity = Activity.extend({
