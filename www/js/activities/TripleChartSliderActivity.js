@@ -13,6 +13,7 @@ var TripleChartSliderActivity = Activity.extend({
       this.labelMax = properties.labelMax;
       this.submitButton = this.page.$el.find(properties.submitSelector);
       this.answerList = properties.answerList;
+      this.isComplete=false;
 
     },
   created: function () //when quiz is created
@@ -22,6 +23,7 @@ var TripleChartSliderActivity = Activity.extend({
     },
   _create: function () {
     var that = this;
+    this.isComplete=false;
     var handles = this.page.$el.find(this.handleSelector);
     // for each handle clip....
     handles.each(function (n, o) {
@@ -98,9 +100,18 @@ var TripleChartSliderActivity = Activity.extend({
             },
             complete: function(){
               var $handle = $(this);
+              $handle.draggable("disable");
+              $handle.fadeTo(1000, 0);
               var $label = that.page.$el.find(".value.row" + $handle.data("index"));
               var end_value = that.answerList[$handle.data("index")-1]
               $label.text(end_value);
+              if (!that.isComplete){
+                that.isComplete = true;
+                console.log("One complete");
+                var resp = that.page.$el.find(".response");
+                console.log(resp);
+                resp.removeClass("hide").addClass("show");
+              }
             }
           }
         );
