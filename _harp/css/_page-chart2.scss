@@ -85,12 +85,23 @@
     #area4{
       .level{ width: 40.66% }
     }
-    #background{
-      position: absolute;
-      display: block;
-      top:0;
-      left:0;     
-    }
+    
+    
+      .background{
+        position: absolute;
+        display: block;
+        top:0;
+        left:0;     
+      }
+      .background2{
+        position: absolute;
+        display: block;
+        top:0;
+        left:640px;     
+      }  
+      
+    
+    
     #submitWrap{
       position: absolute;
       width:100%;

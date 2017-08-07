@@ -594,7 +594,7 @@ var Module = Class.extend({
   {
     var that = this;
 
-    $.when(this._audioDeferred,this._dataDeferred).done(function(){
+    $.when(this._dataDeferred).done(function(){
       setTimeout(function(){ //the audio player has a try catch block that was catching errors when we didn't want moduleReady to be catching. So this hack resets the stack so no errors are being caught in the deferreds try catches.
         that.moduleReady();
       },0);
