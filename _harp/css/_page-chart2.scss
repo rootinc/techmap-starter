@@ -2,7 +2,7 @@
 
   .actWrap {
     position: absolute;
-    width: 837px;
+    width: 850px;
     height: 520px;
     
     p{
@@ -13,7 +13,7 @@
   .activity{
     position: absolute;
     display: block;
-    width: 700px;
+    width: 850px;
     height: 450px;
     
     .label {
@@ -99,13 +99,14 @@
         position: absolute;
         display: block;
         top:0;
-        left:0;     
+        left:0; 
+        width: 700px;
       }
       .background2{
         position: absolute;
         display: block;
         top:0;
-        left:660px;     
+        left:655px;     
       }  
       
     
