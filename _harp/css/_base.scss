@@ -26,7 +26,7 @@ video, img {
 }
 
 section.main {
-  height: 100%;
+  position: relative;
   overflow: hidden;
   @include flex(1 1 auto);
 }
@@ -71,6 +71,7 @@ footer {
 
 
 .page {
+  position: absolute;
   width: 100%;
   height: 100%;
   text-align:center;
@@ -110,11 +111,10 @@ footer {
 
 
 #cornerIcon{
-  position:relative;
-  img {
     position:absolute;
-    bottom: -1px;
+    bottom: -5px;
     right: -1px;
+  img {
   }
 }
 
