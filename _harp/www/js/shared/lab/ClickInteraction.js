@@ -1,3 +1,0 @@
-var ClickInteraction = Interaction.extend({
-  
-});
